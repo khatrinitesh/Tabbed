@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabbed</title>
+	<link rel="stylesheet" href="css/common.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<ul class="tab_link clr">
+			<li><a href="#" data-tab="tab1" class="active">Agency</a></li>
+			<li><a href="#" data-tab="tab2">Bancassurance</a></li>
+			<li><a href="#" data-tab="tab3">Broker</a></li>
+			<li><a href="#" data-tab="tab4">Online</a></li>
+		</ul>
+		<div class="tab_container">
+			<div class="tab_content active" id="tab1">
+				<ul>
+					<li>Witness exponential growth in your Agency operations with Datacomp’s enterprise-class solutions tailor-made for intermediaries</li>
+					<li>Automate your lead-to-deal processes improving accuracy and speed of operations</li>
+					<li>Enable your sales executives to organize routine tasks such as Appointments, Customer Calls, Lead Tracking, and Reminders about Renewal Dates, Premium Due Dates, and Anniversaries</li>
+				</ul>
+			</div>
+			<div class="tab_content" id="tab2">
+				<ul>
+					<li>Push sales via alternate channels such as Bancassurance</li>
+					<li>Equip your bank channels with research on products-on-demand</li>
+					<li>Disseminate marketing information with key Bancassurance stakeholders regularly</li>
+					<li>Monitor stakeholder performance in real-time</li>
+				</ul>
+			</div>
+			<div class="tab_content" id="tab3">
+				<ul>
+					<li>Grow your brokerage business by leaps and bounds with Datacomp’s top-quality automation solutions</li>
+					<li>Improve transparency and visibility of every business function</li>
+					<li>Engage with all key stakeholders-from consumers to TPAs to policy administration to support executives-without hassles or handicap</li>
+				</ul>
+			</div>
+			<div class="tab_content" id="tab4">
+				<ul>
+					<li>Harness the fastest growing online sales channel with Datacomp’s future-ready digital solutions portfolio</li>
+					<li>Ensure that your online presence is up-to-date</li>
+					<li>Recommend the right product to the apt buyer by analyzing the prospect’s investment needs and demographic profile in real time</li>
+					<li>Improve customer engagement with regular communication flow and updates</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src='js/jquery-1.12.0.min.js'></script>
+	<script type="text/javascript">
+		$(".tab_link>li>a").click(function(){
+			var tabbed = $(this).attr("data-tab");
+			$(".tab_link>li>a").removeClass('active');
+			$(".tab_content").removeClass('active');
+			$(this).addClass('active');
+			$("#"+tabbed).addClass('active');
+		});
+	</script>
+</body>
+</html>

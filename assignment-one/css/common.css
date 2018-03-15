@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.clr{
+	clear: both;
+	display: table;
+}
+
+.container{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+	display: inline-block;
+	position: relative;
+}
+
+ul li a{
+	color: #fff;
+	display: block;
+	width: 154px;
+	line-height: 74px;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+}
+
+ul li:nth-child(odd) a.active::before{
+	content:"";
+	position: absolute;
+	bottom: -18px;
+	left: 50%;
+	border-top: 18px solid #00aeef;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+
+ul li:nth-child(even) a.active::before{
+	content:"";
+	position: absolute;
+	bottom: -18px;
+	left: 50%;
+	border-top: 18px solid #003663;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+
+ul li:nth-child(odd) a
+{
+	background-color: #00aeef;
+}
+
+ul li:nth-child(even) a
+{
+	background-color: #003663;
+}
+
+.tab_content{
+	padding: 35px 0;
+	display: none;
+}
+
+.tab_content.active{
+	display: block;
+}
+
+.tab_content ul li{
+	background: url('../img/bullet.png') no-repeat left 4px;
+    color: #707070;
+    padding: 0 0 20px 22px;
+    font-size: 15px;
+    display: block;
+}
